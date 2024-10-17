@@ -1,0 +1,11 @@
+import emoji
+
+# Define some emojis
+happy_face = emoji.emojize(":grinning_face_with_big_eyes:")
+thumbs_up = emoji.emojize(":thumbs_up:")
+heart = emoji.emojize(":red_heart:")
+
+# Print the emojis
+print(f"Here is a happy face: {happy_face}")
+print(f"Here is a thumbs up: {thumbs_up}")
+print(f"Here is a heart: {heart}")
