@@ -1,0 +1,42 @@
+#include <stdio.h>
+}
+
+int main() {
+    CircularQueue* queue = createQueue();
+    int choice, item;
+    
+    while (1) {
+        printf("\nService Station Menu:\n");
+        printf("1. Enqueue Customer\n");
+        printf("2. Dequeue Customer\n");
+        printf("3. Display Queue\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        switch (choice) {
+            case 1:
+                printf("Enter customer ID to enqueue: ");
+                scanf("%d", &item);
+                enqueue(queue, item);
+                break;
+            case 2:
+                item = dequeue(queue);
+                if (item != -1) {
+                    printf("Dequeued customer ID: %d\n", item);
+                }
+                break;
+            case 3:
+                displayQueue(queue);
+                break;
+            case 4:
+                free(queue);
+                printf("Exiting...\n");
+                exit(0);
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+    
+    return 0;
+}
